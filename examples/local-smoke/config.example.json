@@ -1,0 +1,47 @@
+{
+  "fake": true,
+  "username": "",
+  "password": "",
+  "lobbyName": "AR-SMOKE: lehenna qual",
+  "invite": "lehenna",
+  "format": "qualifier",
+  "playersPerSide": 1,
+  "lineupMode": "flexible",
+  "qualPoolRuns": 1,
+  "timers": {
+    "joinSec": 120,
+    "downloadReadySec": 90,
+    "downloadGraceSec": 60,
+    "abortGraceSec": 30,
+    "abortReadySec": 90,
+    "qualCloseSec": 60,
+    "warmupVoteSec": 15,
+    "draftActionSec": 30,
+    "rollChoiceSec": 15,
+    "warmupPickSec": 15
+  },
+  "maxAbortsPerMap": 2,
+  "modMultipliers": {
+    "HD": 1.06,
+    "HR": 1.12,
+    "FL": 1.12
+  },
+  "mappool": [
+    { "slot": "NM1", "beatmapId": "2275555", "mods": [] },
+    { "slot": "NM5", "beatmapId": "2957016", "mods": [] },
+    { "slot": "HD2", "beatmapId": "75930", "mods": ["HD"] },
+    {
+      "slot": "FM1",
+      "beatmapId": "2275555",
+      "mods": ["FM"],
+      "freemod": true,
+      "fmRules": {
+        "scope": "lobby",
+        "requiredGroups": [
+          { "anyOf": [["HD"], ["EZ"], ["EZ", "HD"]], "count": 1 },
+          { "anyOf": [["HR"], ["HR", "HD"]], "count": 1 }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@osutourney/autoreferee-local-smoke",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/run.ts"
+  },
+  "dependencies": {
+    "@osutourney/autoreferee": "workspace:*"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

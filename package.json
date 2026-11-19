@@ -1,0 +1,63 @@
+{
+  "name": "@osutourney/autoreferee",
+  "version": "0.1.0",
+  "description": "osu! multiplayer auto-referee engine (IRC). 0.x until live smoke; see CHANGELOG for 1.0 candidate.",
+  "license": "MIT",
+  "author": "Lehenna S.A.S. de C.V.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "example:smoke": "pnpm build && pnpm --dir examples/local-smoke start",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osutourney/osutourney-api.git",
+    "directory": "packages/autoreferee"
+  },
+  "homepage": "https://github.com/osutourney/osutourney-autoreferee",
+
+  "keywords": [
+    "osu",
+    "bancho",
+    "irc",
+    "referee",
+    "tournament"
+  ]
+}
